@@ -15,7 +15,6 @@ import UIKit
 typealias IsTableCellWithReuseID = HasReuseID & UITableViewCell
 
 class TableViewModel: ViewModel, ViewModelDataSource {
-    
     let elements = BehaviorRelay<[ViewModel]>(value: [])
 
     let modelSelected = PublishRelay<ViewModel>()
@@ -37,9 +36,9 @@ class TableView<Model: TableViewModel>: View<Model> {
     }
 
     var canEditRowAtIndexPath: (IndexPath) -> Bool = { _ in
-        return true
+        true
     }
-    
+
     override func setModel(_ viewModel: Model) {
         super.setModel(viewModel)
 
@@ -55,7 +54,7 @@ class TableView<Model: TableViewModel>: View<Model> {
             Cell.setAnyModel(model)
             return cell
         })
-        
+
         dataSource.titleForHeaderInSection = { dataSource, index in
             dataSource.sectionModels[index].model
         }
@@ -67,7 +66,7 @@ class TableView<Model: TableViewModel>: View<Model> {
         dataSource.canEditRowAtIndexPath = { [weak self] _, b in
             self?.canEditRowAtIndexPath(b) ?? true
         }
-    
+
         dataSource.canMoveRowAtIndexPath = { _, _ in
             true
         }
@@ -75,7 +74,7 @@ class TableView<Model: TableViewModel>: View<Model> {
         tableView.rx.modelSelected(type(of: viewModel.elements.value).Element.self)
             .bind(to: viewModel.modelSelected)
             .disposed(by: disposeBag)
-        
+
         viewModel.elements
             .map { [SectionModel<String, ViewModel>(model: "", items: $0)] }
             .bind(to: tableView.rx.items(dataSource: dataSource))

@@ -6,10 +6,10 @@
 //  Copyright © 2020 dk. All rights reserved.
 //
 
+import EasyPeasy
 import RxCocoa
 import RxSwift
 import UIKit
-import EasyPeasy
 
 typealias ViewWithModel = UIView & HasViewModel
 
@@ -22,7 +22,7 @@ class CellWith<V: ViewWithModel>: UITableViewCell, HasAnyViewModel, HasReuseID {
 
     let aliveDisposeBag = DisposeBag()
     var disposeBag = DisposeBag()
-    
+
     func setAnyModel(_ model: Any) {
         guard let myModel = model as? V.Model else { return }
 
@@ -51,4 +51,3 @@ class CellWith<V: ViewWithModel>: UITableViewCell, HasAnyViewModel, HasReuseID {
         fatalError("init(coder:) has not been implemented")
     }
 }
-

@@ -167,6 +167,7 @@
 				422E32332407045C00BCA1FD /* Frameworks */,
 				422E32342407045C00BCA1FD /* Resources */,
 				92D55AD8DBC6C6DB3E0813DF /* [CP] Embed Pods Frameworks */,
+				427E5F9C24071F1B006DF4B3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -223,6 +224,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		427E5F9C24071F1B006DF4B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
 		92D55AD8DBC6C6DB3E0813DF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
