@@ -11,6 +11,10 @@
 		422E323E2407045C00BCA1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422E323D2407045C00BCA1FD /* ViewController.swift */; };
 		422E32432407045D00BCA1FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 422E32422407045D00BCA1FD /* Assets.xcassets */; };
 		422E32462407045D00BCA1FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422E32442407045D00BCA1FD /* LaunchScreen.storyboard */; };
+		427E5F85240713B1006DF4B3 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F84240713B1006DF4B3 /* UIView+Extensions.swift */; };
+		427E5F88240714BF006DF4B3 /* HasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F87240714BF006DF4B3 /* HasViewModel.swift */; };
+		427E5F8A240714E7006DF4B3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F89240714E7006DF4B3 /* ViewModel.swift */; };
+		427E5F8C24071555006DF4B3 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F8B24071555006DF4B3 /* HasDisposeBag.swift */; };
 		F02DC8E3CFF412D174F5E10E /* Pods_GitHubUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E7AF1A3F875967ABDC00E9 /* Pods_GitHubUsers.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,10 @@
 		422E32422407045D00BCA1FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		422E32452407045D00BCA1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		422E32472407045D00BCA1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		427E5F84240713B1006DF4B3 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		427E5F87240714BF006DF4B3 /* HasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasViewModel.swift; sourceTree = "<group>"; };
+		427E5F89240714E7006DF4B3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		427E5F8B24071555006DF4B3 /* HasDisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasDisposeBag.swift; sourceTree = "<group>"; };
 		A0603CAD8463AD9F30A0BA8D /* Pods-GitHubUsers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUsers.release.xcconfig"; path = "Target Support Files/Pods-GitHubUsers/Pods-GitHubUsers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,11 +77,39 @@
 			children = (
 				422E32392407045C00BCA1FD /* AppDelegate.swift */,
 				422E323D2407045C00BCA1FD /* ViewController.swift */,
+				427E5F862407148F006DF4B3 /* MVVM */,
+				427E5F8324071395006DF4B3 /* Extensions */,
 				422E32422407045D00BCA1FD /* Assets.xcassets */,
 				422E32442407045D00BCA1FD /* LaunchScreen.storyboard */,
 				422E32472407045D00BCA1FD /* Info.plist */,
 			);
 			path = GitHubUsers;
+			sourceTree = "<group>";
+		};
+		427E5F8324071395006DF4B3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				427E5F84240713B1006DF4B3 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		427E5F862407148F006DF4B3 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				427E5F89240714E7006DF4B3 /* ViewModel.swift */,
+				427E5F8D240715D0006DF4B3 /* Protocols */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		427E5F8D240715D0006DF4B3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				427E5F87240714BF006DF4B3 /* HasViewModel.swift */,
+				427E5F8B24071555006DF4B3 /* HasDisposeBag.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		B08CB2C0D88CCB64E142D47C /* Pods */ = {
@@ -199,6 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				427E5F8A240714E7006DF4B3 /* ViewModel.swift in Sources */,
+				427E5F85240713B1006DF4B3 /* UIView+Extensions.swift in Sources */,
+				427E5F88240714BF006DF4B3 /* HasViewModel.swift in Sources */,
+				427E5F8C24071555006DF4B3 /* HasDisposeBag.swift in Sources */,
 				422E323E2407045C00BCA1FD /* ViewController.swift in Sources */,
 				422E323A2407045C00BCA1FD /* AppDelegate.swift in Sources */,
 			);
