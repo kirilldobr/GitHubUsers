@@ -1,0 +1,47 @@
+PODS:
+  - Differentiator (4.0.1)
+  - EasyPeasy (1.9.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.0):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxOptional (4.1.0):
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+
+DEPENDENCIES:
+  - EasyPeasy
+  - RxCocoa
+  - RxDataSources
+  - RxOptional
+  - RxRelay
+  - RxSwift
+
+SPEC REPOS:
+  trunk:
+    - Differentiator
+    - EasyPeasy
+    - RxCocoa
+    - RxDataSources
+    - RxOptional
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  EasyPeasy: 19a84ef8f8bbcf925b9fecc29d1d78b7dab96718
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxDataSources: 38b21b38b9fe646d3bf2641f1720efa05ef1add5
+  RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+
+PODFILE CHECKSUM: e828940864e0f23d89054065faa7b389c0fdac5c
+
+COCOAPODS: 1.8.4
