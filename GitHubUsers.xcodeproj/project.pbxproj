@@ -15,6 +15,12 @@
 		427E5F88240714BF006DF4B3 /* HasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F87240714BF006DF4B3 /* HasViewModel.swift */; };
 		427E5F8A240714E7006DF4B3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F89240714E7006DF4B3 /* ViewModel.swift */; };
 		427E5F8C24071555006DF4B3 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F8B24071555006DF4B3 /* HasDisposeBag.swift */; };
+		427E5F8F24071733006DF4B3 /* HasReuseID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F8E24071733006DF4B3 /* HasReuseID.swift */; };
+		427E5F922407178D006DF4B3 /* CellWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F912407178D006DF4B3 /* CellWith.swift */; };
+		427E5F942407185A006DF4B3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F932407185A006DF4B3 /* View.swift */; };
+		427E5F972407193E006DF4B3 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F962407193E006DF4B3 /* TableView.swift */; };
+		427E5F9924071977006DF4B3 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F9824071977006DF4B3 /* UITableView+Extensions.swift */; };
+		427E5F9B240719C2006DF4B3 /* ViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F9A240719C2006DF4B3 /* ViewModelDataSource.swift */; };
 		F02DC8E3CFF412D174F5E10E /* Pods_GitHubUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E7AF1A3F875967ABDC00E9 /* Pods_GitHubUsers.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +37,12 @@
 		427E5F87240714BF006DF4B3 /* HasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasViewModel.swift; sourceTree = "<group>"; };
 		427E5F89240714E7006DF4B3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		427E5F8B24071555006DF4B3 /* HasDisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasDisposeBag.swift; sourceTree = "<group>"; };
+		427E5F8E24071733006DF4B3 /* HasReuseID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasReuseID.swift; sourceTree = "<group>"; };
+		427E5F912407178D006DF4B3 /* CellWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWith.swift; sourceTree = "<group>"; };
+		427E5F932407185A006DF4B3 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		427E5F962407193E006DF4B3 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		427E5F9824071977006DF4B3 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		427E5F9A240719C2006DF4B3 /* ViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDataSource.swift; sourceTree = "<group>"; };
 		A0603CAD8463AD9F30A0BA8D /* Pods-GitHubUsers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUsers.release.xcconfig"; path = "Target Support Files/Pods-GitHubUsers/Pods-GitHubUsers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +89,7 @@
 			children = (
 				422E32392407045C00BCA1FD /* AppDelegate.swift */,
 				422E323D2407045C00BCA1FD /* ViewController.swift */,
+				427E5F902407177D006DF4B3 /* Views */,
 				427E5F862407148F006DF4B3 /* MVVM */,
 				427E5F8324071395006DF4B3 /* Extensions */,
 				422E32422407045D00BCA1FD /* Assets.xcassets */,
@@ -90,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				427E5F84240713B1006DF4B3 /* UIView+Extensions.swift */,
+				427E5F9824071977006DF4B3 /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -108,8 +122,28 @@
 			children = (
 				427E5F87240714BF006DF4B3 /* HasViewModel.swift */,
 				427E5F8B24071555006DF4B3 /* HasDisposeBag.swift */,
+				427E5F8E24071733006DF4B3 /* HasReuseID.swift */,
+				427E5F9A240719C2006DF4B3 /* ViewModelDataSource.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		427E5F902407177D006DF4B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				427E5F9524071893006DF4B3 /* Base */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		427E5F9524071893006DF4B3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				427E5F912407178D006DF4B3 /* CellWith.swift */,
+				427E5F962407193E006DF4B3 /* TableView.swift */,
+				427E5F932407185A006DF4B3 /* View.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		B08CB2C0D88CCB64E142D47C /* Pods */ = {
@@ -236,9 +270,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				427E5F8A240714E7006DF4B3 /* ViewModel.swift in Sources */,
+				427E5F972407193E006DF4B3 /* TableView.swift in Sources */,
+				427E5F8F24071733006DF4B3 /* HasReuseID.swift in Sources */,
 				427E5F85240713B1006DF4B3 /* UIView+Extensions.swift in Sources */,
 				427E5F88240714BF006DF4B3 /* HasViewModel.swift in Sources */,
 				427E5F8C24071555006DF4B3 /* HasDisposeBag.swift in Sources */,
+				427E5F942407185A006DF4B3 /* View.swift in Sources */,
+				427E5F9B240719C2006DF4B3 /* ViewModelDataSource.swift in Sources */,
+				427E5F9924071977006DF4B3 /* UITableView+Extensions.swift in Sources */,
+				427E5F922407178D006DF4B3 /* CellWith.swift in Sources */,
 				422E323E2407045C00BCA1FD /* ViewController.swift in Sources */,
 				422E323A2407045C00BCA1FD /* AppDelegate.swift in Sources */,
 			);
