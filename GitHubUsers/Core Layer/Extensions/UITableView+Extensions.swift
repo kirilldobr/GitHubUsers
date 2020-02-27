@@ -10,6 +10,7 @@ import UIKit
 
 extension UITableView {
     static let globalAssociation: [IsTableCellWithReuseID.Type] = [
+        CellWith<UserCardView>.self,
     ]
 
     func register(cellClass: IsTableCellWithReuseID.Type) {

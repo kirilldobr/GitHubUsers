@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		422E323A2407045C00BCA1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422E32392407045C00BCA1FD /* AppDelegate.swift */; };
-		422E323E2407045C00BCA1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422E323D2407045C00BCA1FD /* ViewController.swift */; };
+		422E323E2407045C00BCA1FD /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422E323D2407045C00BCA1FD /* UserListViewController.swift */; };
 		422E32432407045D00BCA1FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 422E32422407045D00BCA1FD /* Assets.xcassets */; };
 		422E32462407045D00BCA1FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422E32442407045D00BCA1FD /* LaunchScreen.storyboard */; };
 		427E5F85240713B1006DF4B3 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F84240713B1006DF4B3 /* UIView+Extensions.swift */; };
@@ -21,6 +21,15 @@
 		427E5F972407193E006DF4B3 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F962407193E006DF4B3 /* TableView.swift */; };
 		427E5F9924071977006DF4B3 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F9824071977006DF4B3 /* UITableView+Extensions.swift */; };
 		427E5F9B240719C2006DF4B3 /* ViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F9A240719C2006DF4B3 /* ViewModelDataSource.swift */; };
+		427E5F9E24071FD5006DF4B3 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5F9D24071FD5006DF4B3 /* UserListViewModel.swift */; };
+		427E5FA12407201C006DF4B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FA02407201C006DF4B3 /* ViewController.swift */; };
+		427E5FA3240721AF006DF4B3 /* UserCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FA2240721AF006DF4B3 /* UserCardView.swift */; };
+		427E5FA5240721BF006DF4B3 /* UserCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FA4240721BF006DF4B3 /* UserCardViewModel.swift */; };
+		427E5FA924072A8B006DF4B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FA824072A8B006DF4B3 /* User.swift */; };
+		427E5FAB24072BAF006DF4B3 /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FAA24072BAF006DF4B3 /* AccountType.swift */; };
+		427E5FB124073E44006DF4B3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FB024073E44006DF4B3 /* Endpoint.swift */; };
+		427E5FB324074490006DF4B3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FB224074490006DF4B3 /* NetworkManager.swift */; };
+		427E5FB5240746C8006DF4B3 /* GetUsersFailureReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FB4240746C8006DF4B3 /* GetUsersFailureReason.swift */; };
 		F02DC8E3CFF412D174F5E10E /* Pods_GitHubUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E7AF1A3F875967ABDC00E9 /* Pods_GitHubUsers.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +38,7 @@
 		3EF6BEBCFB855B3AE71321EA /* Pods-GitHubUsers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUsers.debug.xcconfig"; path = "Target Support Files/Pods-GitHubUsers/Pods-GitHubUsers.debug.xcconfig"; sourceTree = "<group>"; };
 		422E32362407045C00BCA1FD /* GitHubUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		422E32392407045C00BCA1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		422E323D2407045C00BCA1FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		422E323D2407045C00BCA1FD /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		422E32422407045D00BCA1FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		422E32452407045D00BCA1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		422E32472407045D00BCA1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +52,15 @@
 		427E5F962407193E006DF4B3 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		427E5F9824071977006DF4B3 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		427E5F9A240719C2006DF4B3 /* ViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDataSource.swift; sourceTree = "<group>"; };
+		427E5F9D24071FD5006DF4B3 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		427E5FA02407201C006DF4B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		427E5FA2240721AF006DF4B3 /* UserCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardView.swift; sourceTree = "<group>"; };
+		427E5FA4240721BF006DF4B3 /* UserCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardViewModel.swift; sourceTree = "<group>"; };
+		427E5FA824072A8B006DF4B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		427E5FAA24072BAF006DF4B3 /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
+		427E5FB024073E44006DF4B3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		427E5FB224074490006DF4B3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		427E5FB4240746C8006DF4B3 /* GetUsersFailureReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsersFailureReason.swift; sourceTree = "<group>"; };
 		A0603CAD8463AD9F30A0BA8D /* Pods-GitHubUsers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUsers.release.xcconfig"; path = "Target Support Files/Pods-GitHubUsers/Pods-GitHubUsers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,10 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				422E32392407045C00BCA1FD /* AppDelegate.swift */,
-				422E323D2407045C00BCA1FD /* ViewController.swift */,
-				427E5F902407177D006DF4B3 /* Views */,
-				427E5F862407148F006DF4B3 /* MVVM */,
-				427E5F8324071395006DF4B3 /* Extensions */,
+				427E5FAD240734EE006DF4B3 /* Core Layer */,
+				427E5FAE24073A5C006DF4B3 /* Network Layer */,
+				427E5FAC240734E0006DF4B3 /* Presentation Layer */,
 				422E32422407045D00BCA1FD /* Assets.xcassets */,
 				422E32442407045D00BCA1FD /* LaunchScreen.storyboard */,
 				422E32472407045D00BCA1FD /* Info.plist */,
@@ -131,6 +148,7 @@
 		427E5F902407177D006DF4B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				427E5F9F24071FF2006DF4B3 /* UserListViewController */,
 				427E5F9524071893006DF4B3 /* Base */,
 			);
 			path = Views;
@@ -140,10 +158,75 @@
 			isa = PBXGroup;
 			children = (
 				427E5F912407178D006DF4B3 /* CellWith.swift */,
+				427E5FA02407201C006DF4B3 /* ViewController.swift */,
 				427E5F962407193E006DF4B3 /* TableView.swift */,
 				427E5F932407185A006DF4B3 /* View.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		427E5F9F24071FF2006DF4B3 /* UserListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				427E5F9D24071FD5006DF4B3 /* UserListViewModel.swift */,
+				422E323D2407045C00BCA1FD /* UserListViewController.swift */,
+				427E5FA624072227006DF4B3 /* UserCardView */,
+			);
+			path = UserListViewController;
+			sourceTree = "<group>";
+		};
+		427E5FA624072227006DF4B3 /* UserCardView */ = {
+			isa = PBXGroup;
+			children = (
+				427E5FA4240721BF006DF4B3 /* UserCardViewModel.swift */,
+				427E5FA2240721AF006DF4B3 /* UserCardView.swift */,
+			);
+			path = UserCardView;
+			sourceTree = "<group>";
+		};
+		427E5FA724072334006DF4B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				427E5FAA24072BAF006DF4B3 /* AccountType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		427E5FAC240734E0006DF4B3 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				427E5F902407177D006DF4B3 /* Views */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		427E5FAD240734EE006DF4B3 /* Core Layer */ = {
+			isa = PBXGroup;
+			children = (
+				427E5FA724072334006DF4B3 /* Models */,
+				427E5F8324071395006DF4B3 /* Extensions */,
+				427E5F862407148F006DF4B3 /* MVVM */,
+			);
+			path = "Core Layer";
+			sourceTree = "<group>";
+		};
+		427E5FAE24073A5C006DF4B3 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				427E5FB224074490006DF4B3 /* NetworkManager.swift */,
+				427E5FB4240746C8006DF4B3 /* GetUsersFailureReason.swift */,
+				427E5FB024073E44006DF4B3 /* Endpoint.swift */,
+				427E5FAF24073A77006DF4B3 /* Models */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		427E5FAF24073A77006DF4B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				427E5FA824072A8B006DF4B3 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B08CB2C0D88CCB64E142D47C /* Pods */ = {
@@ -288,16 +371,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				427E5F8A240714E7006DF4B3 /* ViewModel.swift in Sources */,
+				427E5FB124073E44006DF4B3 /* Endpoint.swift in Sources */,
 				427E5F972407193E006DF4B3 /* TableView.swift in Sources */,
 				427E5F8F24071733006DF4B3 /* HasReuseID.swift in Sources */,
 				427E5F85240713B1006DF4B3 /* UIView+Extensions.swift in Sources */,
+				427E5FA12407201C006DF4B3 /* ViewController.swift in Sources */,
+				427E5FB5240746C8006DF4B3 /* GetUsersFailureReason.swift in Sources */,
 				427E5F88240714BF006DF4B3 /* HasViewModel.swift in Sources */,
 				427E5F8C24071555006DF4B3 /* HasDisposeBag.swift in Sources */,
+				427E5FAB24072BAF006DF4B3 /* AccountType.swift in Sources */,
+				427E5FA924072A8B006DF4B3 /* User.swift in Sources */,
+				427E5FA5240721BF006DF4B3 /* UserCardViewModel.swift in Sources */,
 				427E5F942407185A006DF4B3 /* View.swift in Sources */,
+				427E5FB324074490006DF4B3 /* NetworkManager.swift in Sources */,
 				427E5F9B240719C2006DF4B3 /* ViewModelDataSource.swift in Sources */,
+				427E5FA3240721AF006DF4B3 /* UserCardView.swift in Sources */,
 				427E5F9924071977006DF4B3 /* UITableView+Extensions.swift in Sources */,
+				427E5F9E24071FD5006DF4B3 /* UserListViewModel.swift in Sources */,
 				427E5F922407178D006DF4B3 /* CellWith.swift in Sources */,
-				422E323E2407045C00BCA1FD /* ViewController.swift in Sources */,
+				422E323E2407045C00BCA1FD /* UserListViewController.swift in Sources */,
 				422E323A2407045C00BCA1FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
