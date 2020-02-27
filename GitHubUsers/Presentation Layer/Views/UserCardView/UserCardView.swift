@@ -12,21 +12,41 @@ import SDWebImage
 import UIKit
 
 class UserCardView: View<UserCardViewModel> {
-    let imageView = UIImageView()
-    let loginLabel = UILabel()
-    let url = UILabel()
-    let accountTypeLabel = UILabel()
-    let adminStatusLabel = UILabel()
+    private let userAvatarView = UserAvatarView()
+    private let userTitleView = UserTitleView()
+    private let urlLabel = UILabel()
+    
+    private let favoritedButton = UIButton()
     
     override func didLoad() {
         super.didLoad()
         
-        addSubview(imageView, layout: Top(), Bottom(), Left(), Width(40))
+        let horizontalStackView = UIStackView()
+        
+        let verticalStackViewHolderView = UIView()
+        let verticalStackView = UIStackView()
+        verticalStackView.axis = .vertical
+        
+        verticalStackViewHolderView.addSubview(verticalStackView, layout: Left(), Right(), CenterY())
+        
+        verticalStackView.addArrangedSubview(userTitleView)
+        verticalStackView.addArrangedSubview(urlLabel)
+        
+        horizontalStackView.addArrangedSubview(userAvatarView)
+        horizontalStackView.addArrangedSubview(verticalStackViewHolderView)
+        horizontalStackView.addArrangedSubview(favoritedButton)
+        
+        favoritedButton.easy.layout(Width(46))
+        userAvatarView.easy.layout(Width(54))
+        
+        addSubview(horizontalStackView, layout: Edges())
     }
     
     override func setModel(_ viewModel: UserCardViewModel) {
         super.setModel(viewModel)
         
-        imageView.sd_setImage(with: URL(string: viewModel.avatarURL), placeholderImage: UIImage(named: "placeholder.png"))
+        userAvatarView.setModel(viewModel.userAvatarViewModel)
+        userTitleView.setModel(viewModel.userTitleViewModel)
+        urlLabel.text = viewModel.url
     }
 }

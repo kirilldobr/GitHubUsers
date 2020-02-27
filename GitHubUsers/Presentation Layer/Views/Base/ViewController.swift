@@ -20,5 +20,6 @@ class ViewController<Model: ViewModel>: UIViewController, HasViewModel, HasDispo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
     }
 }

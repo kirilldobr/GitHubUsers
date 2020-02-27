@@ -1,2 +1,3 @@
 --trimwhitespace nonblank-lines
 --exclude Pods,Generated
+--swiftversion 5

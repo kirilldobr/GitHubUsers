@@ -10,15 +10,15 @@ import RxSwift
 import UIKit
 
 class UserCardViewModel: ViewModel {
-    let login: String
-    let isAdmin: String
-    let userType: String
-    let avatarURL: String
+    let userAvatarViewModel: UserAvatarViewModel
+    let userTitleViewModel: UserTitleViewModel
+    
+    let url: String
     
     init(user: User) {
-        login = user.login
-        isAdmin = user.isAdmin ? "admin" : "regular"
-        userType = user.accountType.rawValue
-        avatarURL = user.avatarURL
+        userAvatarViewModel = UserAvatarViewModel(imageURL: user.avatarURL,
+                                                  adminLabelIsHidden: !user.isAdmin)
+        userTitleViewModel = UserTitleViewModel(username: user.login, userType: user.accountType.rawValue)
+        url = user.url
     }
 }

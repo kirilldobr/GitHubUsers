@@ -16,7 +16,8 @@ class UserListViewModel: ViewModel {
         super.init()
         
         NetworkManager.getUsers(since: nil).map { users in
-            users.map { user in UserCardViewModel(user: user) }
+            print(users)
+            return users.map { user in UserCardViewModel(user: user) }
         }
         .bind(to: tableViewModel.elements)
         .disposed(by: aliveDisposeBag)

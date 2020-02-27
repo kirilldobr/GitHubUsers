@@ -21,7 +21,7 @@ class UserListViewController: ViewController<UserListViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.tableView.rowHeight = 44
+        tableView.tableView.rowHeight = 75
         
         view.addSubview(tableView, layout: Edges())
     }
