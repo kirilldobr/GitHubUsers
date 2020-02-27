@@ -13,11 +13,11 @@ import UIKit
 class ViewController<Model: ViewModel>: UIViewController, HasViewModel, HasDisposeBag {
     let aliveDisposeBag = DisposeBag()
     var disposeBag = DisposeBag()
-
+    
     func setModel(_: Model) {
         disposeBag = DisposeBag()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

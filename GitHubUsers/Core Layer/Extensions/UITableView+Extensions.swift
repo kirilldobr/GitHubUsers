@@ -12,7 +12,7 @@ extension UITableView {
     static let globalAssociation: [IsTableCellWithReuseID.Type] = [
         CellWith<UserCardView>.self,
     ]
-
+    
     func register(cellClass: IsTableCellWithReuseID.Type) {
         register(cellClass.self, forCellReuseIdentifier: cellClass.cellReuseIdentifier)
     }

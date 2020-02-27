@@ -20,12 +20,14 @@ struct User: Codable {
     let accountType: AccountType
     let isAdmin: Bool
     let avatarURL: String
-
+    let login: String
+    
     enum CodingKeys: String, CodingKey {
         case avatarURL = "avatar_url"
         case isAdmin = "site_admin"
         case id
         case url
         case accountType = "type"
+        case login
     }
 }

@@ -13,13 +13,13 @@ import UIKit
 class NetworkManager {
     static func getUsers(since: Int?) -> Observable<[User]> {
         let parameters: [String: Any]?
-
+        
         if let since = since {
             parameters = ["since": since]
         } else {
             parameters = nil
         }
-
+        
         return Observable.create { observer -> Disposable in
             Alamofire.request(Endpoint.users, parameters: parameters)
                 .validate()
@@ -35,6 +35,7 @@ class NetworkManager {
                         do {
                             let friends = try JSONDecoder().decode([User].self, from: data)
                             observer.onNext(friends)
+                            observer.onCompleted()
                         } catch {
                             observer.onError(error)
                         }
@@ -46,7 +47,7 @@ class NetworkManager {
                         observer.onError(error)
                     }
                 }
-
+            
             return Disposables.create()
         }
     }

@@ -12,6 +12,8 @@ target 'GitHubUsers' do
   pod 'RxOptional'
   pod 'RxDataSources', '4.0'
   
+  pod 'SDWebImage'
+  
   pod 'EasyPeasy'
 
   pod 'Alamofire'

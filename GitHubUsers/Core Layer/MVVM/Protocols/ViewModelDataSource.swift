@@ -11,6 +11,6 @@ import UIKit
 
 protocol ViewModelDataSource {
     associatedtype VM
-
+    
     var elements: BehaviorRelay<[VM]> { get }
 }

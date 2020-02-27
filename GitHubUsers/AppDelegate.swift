@@ -11,20 +11,18 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-
+    
+    lazy var userListViewModel = UserListViewModel()
+    
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let homeViewController = UserListViewController()
-        homeViewController.setModel(UserListViewModel())
-
+        
+        homeViewController.setModel(userListViewModel)
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = homeViewController
         window?.makeKeyAndVisible()
-
-        NetworkManager.getUsers(since: nil)
-            .bind {
-                print($0)
-            }
-
+        
         return true
     }
 }

@@ -11,16 +11,18 @@ import UIKit
 
 class UserListViewController: ViewController<UserListViewModel> {
     let tableView = TableView<TableViewModel>()
-
+    
     override func setModel(_ viewModel: UserListViewModel) {
         super.setModel(viewModel)
-
+        
         tableView.setModel(viewModel.tableViewModel)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        tableView.tableView.rowHeight = 44
+        
         view.addSubview(tableView, layout: Edges())
     }
 }

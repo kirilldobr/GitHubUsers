@@ -11,9 +11,9 @@ import UIKit
 
 protocol HasViewModel {
     associatedtype Model: ViewModel
-
+    
     func setModel(_ viewModel: Model)
-
+    
     init()
     init(viewModel: Model)
 }

@@ -1,0 +1,2 @@
+--trimwhitespace nonblank-lines
+--exclude Pods,Generated

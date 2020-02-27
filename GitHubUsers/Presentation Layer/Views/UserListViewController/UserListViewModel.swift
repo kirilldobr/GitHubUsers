@@ -6,8 +6,19 @@
 //  Copyright © 2020 dk. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
 class UserListViewModel: ViewModel {
     let tableViewModel = TableViewModel()
+    
+    override init() {
+        super.init()
+        
+        NetworkManager.getUsers(since: nil).map { users in
+            users.map { user in UserCardViewModel(user: user) }
+        }
+        .bind(to: tableViewModel.elements)
+        .disposed(by: aliveDisposeBag)
+    }
 }
