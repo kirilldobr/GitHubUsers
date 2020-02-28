@@ -21,7 +21,7 @@ class UserTitleView: View<UserTitleViewModel> {
         
         usernameLabel.setContentHuggingPriority(.required, for: .horizontal)
         
-        let usernameLabelFont = UIFont.systemFont(ofSize: 14)
+        let usernameLabelFont = UIFont.systemFont(ofSize: 16)
         usernameLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: usernameLabelFont)
         usernameLabel.adjustsFontForContentSizeCategory = true
         
@@ -34,6 +34,7 @@ class UserTitleView: View<UserTitleViewModel> {
         super.setModel(viewModel)
         
         usernameLabel.text = viewModel.username
-        accountTypeLabel.text = viewModel.userType
+        accountTypeLabel.text = viewModel.accountType
+        accountTypeLabel.textColor = viewModel.accountTypeLabelBackgroundColor
     }
 }

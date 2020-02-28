@@ -10,10 +10,17 @@ import UIKit
 
 class UserTitleViewModel: ViewModel {
     let username: String
-    let userType: String
+    let accountType: String
     
-    init(username: String, userType: String) {
+    let accountTypeLabelBackgroundColor: UIColor
+    
+    init(username: String, accountType: AccountType) {
         self.username = username
-        self.userType = userType
+        self.accountType = accountType.rawValue
+        
+        switch accountType {
+        case .user: accountTypeLabelBackgroundColor = .lightGray
+        case .organization: accountTypeLabelBackgroundColor = .orange
+        }
     }
 }

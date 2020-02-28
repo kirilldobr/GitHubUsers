@@ -40,6 +40,11 @@ class UserCardView: View<UserCardViewModel> {
         favoritedButton.easy.layout(Width(46))
         userAvatarView.easy.layout(Width(54))
         
+        let urlLabelFont = UIFont.systemFont(ofSize: 12)
+        urlLabel.font = UIFontMetrics(forTextStyle: .subheadline).scaledFont(for: urlLabelFont)
+        urlLabel.adjustsFontForContentSizeCategory = true
+        urlLabel.textColor = .blue
+        
         addSubview(horizontalStackView, layout: Top(), Bottom(), Left(16), Right(16))
     }
     

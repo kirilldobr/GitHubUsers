@@ -18,7 +18,7 @@ class UserCardViewModel: ViewModel {
     init(user: User) {
         userAvatarViewModel = UserAvatarViewModel(imageURL: user.avatarURL,
                                                   adminLabelIsHidden: !user.isAdmin)
-        userTitleViewModel = UserTitleViewModel(username: user.login, userType: user.accountType.rawValue)
+        userTitleViewModel = UserTitleViewModel(username: user.login, accountType: user.accountType)
         url = user.url
     }
 }
