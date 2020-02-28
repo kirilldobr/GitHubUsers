@@ -21,19 +21,28 @@ class TableViewModel: ViewModel, ViewModelDataSource {
     let modelSelected = PublishRelay<ViewModel>()
     
     let reachedBottom = PublishRelay<Void>()
+    
+    let pullToRefresh = PublishRelay<Void>()
+    
+    let endRefreshing = PublishRelay<Void>()
 }
 
 class TableView<Model: TableViewModel>: View<Model> {
-    let tableView = UITableView(frame: CGRect.zero, style: .plain)
+    private let tableView = UITableView(frame: CGRect.zero, style: .plain)
+    
+    private let refreshControl = UIRefreshControl()
     
     override func didLoad() {
         super.didLoad()
         
-        tableView.backgroundColor = .clear
+        tableView.backgroundColor = .white
         
         addSubview(tableView, layout: Edges())
         
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 75
         tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        tableView.addSubview(refreshControl)
     }
     
     var canEditRowAtIndexPath: (IndexPath) -> Bool = { _ in
@@ -83,6 +92,17 @@ class TableView<Model: TableViewModel>: View<Model> {
         
         tableView.rx.reachedBottom()
             .bind(to: viewModel.reachedBottom)
+            .disposed(by: disposeBag)
+        
+        refreshControl.rx.controlEvent(.valueChanged)
+            .bind(to: viewModel.pullToRefresh)
+            .disposed(by: disposeBag)
+        
+        viewModel.endRefreshing
+            .observeOn(MainScheduler())
+            .bind { [weak self] in
+                self?.refreshControl.endRefreshing()
+            }
             .disposed(by: disposeBag)
     }
 }

@@ -38,9 +38,6 @@ class UserListViewController: ViewController<UserListViewModel> {
         title = "GitHub Users"
         // navigationController?.navigationBar.prefersLargeTitles = true
         
-        tableView.tableView.rowHeight = UITableView.automaticDimension
-        tableView.tableView.estimatedRowHeight = 75
-        
         view.addSubview(tableView, layout: Edges())
     }
 }

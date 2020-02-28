@@ -21,6 +21,8 @@ class UserCardView: View<UserCardViewModel> {
     override func didLoad() {
         super.didLoad()
         
+        backgroundColor = .white
+        
         let horizontalStackView = UIStackView()
         
         let verticalStackViewHolderView = UIView()
