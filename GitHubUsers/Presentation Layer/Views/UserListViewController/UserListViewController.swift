@@ -16,9 +16,9 @@ class UserListViewController: ViewController<UserListViewModel> {
     override func setModel(_ viewModel: UserListViewModel) {
         super.setModel(viewModel)
         
-        tableView.setModel(viewModel.tableViewModel)
+        tableView.setModel(viewModel)
         
-        viewModel.tableViewModel.modelSelected
+        viewModel.modelSelected
             .observeOn(MainScheduler())
             .bind { [weak self] vm in
                 // could have used a generic in TableViewModel

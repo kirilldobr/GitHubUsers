@@ -11,6 +11,7 @@ target 'GitHubUsers' do
   pod 'RxRelay',    '5.0'
   pod 'RxOptional'
   pod 'RxDataSources', '4.0'
+  pod 'RxSwiftExt'
   
   pod 'SDWebImage'
   

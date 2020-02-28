@@ -9,17 +9,19 @@
 import RxSwift
 import UIKit
 
-class UserListViewModel: ViewModel {
-    let tableViewModel = TableViewModel()
-    
+class UserListViewModel: TableViewModel {
     override init() {
         super.init()
         
-        NetworkManager.getUsers(since: nil).map { users in
-            print(users)
-            return users.map { user in UserCardViewModel(user: user) }
-        }
-        .bind(to: tableViewModel.elements)
-        .disposed(by: aliveDisposeBag)
+        reachedBottom
+            .withLatestFrom(elements)
+            .map { $0.last as? UserCardViewModel }
+            .map { $0?.user.id }
+            .flatMapLatest { NetworkManager.getUsers(since: $0) }
+            .map { $0.map { user in UserCardViewModel(user: user) } }
+            .bind { [weak self] newModels in
+                self?.elements.accept((self?.elements.value ?? []) + newModels)
+            }
+            .disposed(by: aliveDisposeBag)
     }
 }

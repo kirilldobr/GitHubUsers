@@ -2,9 +2,6 @@ PODS:
   - Alamofire (4.9.1)
   - Differentiator (4.0.1)
   - EasyPeasy (1.9.0)
-  - Kingfisher (5.13.0):
-    - Kingfisher/Core (= 5.13.0)
-  - Kingfisher/Core (5.13.0)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -18,6 +15,14 @@ PODS:
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
   - SDWebImage (5.5.1):
     - SDWebImage/Core (= 5.5.1)
   - SDWebImage/Core (5.5.1)
@@ -25,12 +30,12 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - EasyPeasy
-  - Kingfisher
   - RxCocoa (= 5.0)
   - RxDataSources (= 4.0)
   - RxOptional
   - RxRelay (= 5.0)
   - RxSwift (= 5.0)
+  - RxSwiftExt
   - SDWebImage
 
 SPEC REPOS:
@@ -38,26 +43,26 @@ SPEC REPOS:
     - Alamofire
     - Differentiator
     - EasyPeasy
-    - Kingfisher
     - RxCocoa
     - RxDataSources
     - RxOptional
     - RxRelay
     - RxSwift
+    - RxSwiftExt
     - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   EasyPeasy: 19a84ef8f8bbcf925b9fecc29d1d78b7dab96718
-  Kingfisher: 0d334cada987fcddbe9b5cec516406e1ee9d4748
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxDataSources: 38b21b38b9fe646d3bf2641f1720efa05ef1add5
   RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   SDWebImage: 1245d058b7b8f59adef7a6da6bbafd4f1ab67041
 
-PODFILE CHECKSUM: fd1fcd4721ebd8f6eaf2a4bf9003c78ad75e82d1
+PODFILE CHECKSUM: dfe021ed3819ae7151e349ead05a2416c8c85d6e
 
 COCOAPODS: 1.8.4

@@ -17,8 +17,8 @@ class UserDetailViewController: ViewController<UserDetailViewModel> {
     
     override func loadView() {
         super.loadView()
-        //better than adding as subview
-        //doesn't lag on opening
+        // better than adding as subview
+        // doesn't lag on opening
         view = webView
     }
     

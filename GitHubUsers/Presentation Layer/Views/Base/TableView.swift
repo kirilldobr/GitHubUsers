@@ -10,6 +10,7 @@ import EasyPeasy
 import RxCocoa
 import RxDataSources
 import RxSwift
+import RxSwiftExt
 import UIKit
 
 typealias IsTableCellWithReuseID = HasReuseID & UITableViewCell
@@ -18,6 +19,8 @@ class TableViewModel: ViewModel, ViewModelDataSource {
     let elements = BehaviorRelay<[ViewModel]>(value: [])
     
     let modelSelected = PublishRelay<ViewModel>()
+    
+    let reachedBottom = PublishRelay<Void>()
 }
 
 class TableView<Model: TableViewModel>: View<Model> {
@@ -76,6 +79,10 @@ class TableView<Model: TableViewModel>: View<Model> {
         viewModel.elements
             .map { [SectionModel<String, ViewModel>(model: "", items: $0)] }
             .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        
+        tableView.rx.reachedBottom()
+            .bind(to: viewModel.reachedBottom)
             .disposed(by: disposeBag)
     }
 }
