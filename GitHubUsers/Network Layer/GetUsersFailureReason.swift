@@ -9,6 +9,5 @@
 import UIKit
 
 enum GetUsersFailureReason: Int, Error {
-    case unAuthorized = 401
     case notFound = 404
 }

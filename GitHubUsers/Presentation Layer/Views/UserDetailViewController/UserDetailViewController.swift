@@ -13,7 +13,7 @@ import WebKit
 class UserDetailViewController: ViewController<UserDetailViewModel> {
     lazy var webView = WKWebView()
     
-    let spinner = UIActivityIndicatorView()
+    let spinner = ActivityIndicatorView()
     
     override func loadView() {
         super.loadView()
@@ -30,12 +30,6 @@ class UserDetailViewController: ViewController<UserDetailViewModel> {
         webView.navigationDelegate = self
         
         view.addSubview(spinner, layout: Center())
-        
-        spinner.hidesWhenStopped = true
-        
-        shouldHaveErrorLabel = true
-        spinner.style = .medium
-        spinner.color = .black
     }
     
     override func setModel(_ viewModel: UserDetailViewModel) {
@@ -51,13 +45,12 @@ class UserDetailViewController: ViewController<UserDetailViewModel> {
 
 extension UserDetailViewController: WKNavigationDelegate {
     func webView(_: WKWebView, didFinish _: WKNavigation!) {
-        hideError()
         spinner.stopAnimating()
     }
     
     func webView(_: WKWebView, didFail _: WKNavigation!, withError error: Error) {
         spinner.stopAnimating()
-        showError(message: "Failed to load page with error:\n\(error)")
+        // showError(message: "Failed to load page with error:\n\(error)")
     }
     
 //    func webView(_: WKWebView, didFail _: WKNavigation!, withError error: Error) {

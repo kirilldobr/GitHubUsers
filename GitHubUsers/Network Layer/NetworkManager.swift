@@ -60,11 +60,6 @@ class NetworkManager {
                             observer.onCompleted()
                         }
                     case let .failure(error):
-                        if let statusCode = response.response?.statusCode,
-                            let reason = GetUsersFailureReason(rawValue: statusCode) {
-                            observer.onError(reason)
-                            observer.onCompleted()
-                        }
                         observer.onError(error)
                         observer.onCompleted()
                     }

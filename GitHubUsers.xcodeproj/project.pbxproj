@@ -37,6 +37,9 @@
 		42B9AF2524089C9100489A3F /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2424089C9100489A3F /* UserDetailViewController.swift */; };
 		42B9AF2724089CDC00489A3F /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2624089CDC00489A3F /* UserDetailViewModel.swift */; };
 		42B9AF2B2408A9F900489A3F /* DarkModeAwareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2A2408A9F900489A3F /* DarkModeAwareNavigationController.swift */; };
+		42B9AF2D240949F900489A3F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2C240949F900489A3F /* ErrorView.swift */; };
+		42B9AF3024094A1200489A3F /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2F24094A1200489A3F /* ErrorViewModel.swift */; };
+		42B9AF32240961E300489A3F /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF31240961E300489A3F /* Spinner.swift */; };
 		F02DC8E3CFF412D174F5E10E /* Pods_GitHubUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E7AF1A3F875967ABDC00E9 /* Pods_GitHubUsers.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +78,9 @@
 		42B9AF2424089C9100489A3F /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		42B9AF2624089CDC00489A3F /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		42B9AF2A2408A9F900489A3F /* DarkModeAwareNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeAwareNavigationController.swift; sourceTree = "<group>"; };
+		42B9AF2C240949F900489A3F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		42B9AF2F24094A1200489A3F /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		42B9AF31240961E300489A3F /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		A0603CAD8463AD9F30A0BA8D /* Pods-GitHubUsers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUsers.release.xcconfig"; path = "Target Support Files/Pods-GitHubUsers/Pods-GitHubUsers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +189,7 @@
 				427E5F9524071893006DF4B3 /* Base */,
 				4241CA7724088C0B008176B6 /* UserAvatarView */,
 				4241CA7224088B77008176B6 /* UserTitleView */,
+				42B9AF2E240949FD00489A3F /* ErrorView */,
 				427E5FA624072227006DF4B3 /* UserCardView */,
 				42B9AF2324089C7D00489A3F /* UserDetailViewController */,
 				427E5F9F24071FF2006DF4B3 /* UserListViewController */,
@@ -207,6 +214,7 @@
 			children = (
 				427E5F9D24071FD5006DF4B3 /* UserListViewModel.swift */,
 				422E323D2407045C00BCA1FD /* UserListViewController.swift */,
+				42B9AF31240961E300489A3F /* Spinner.swift */,
 			);
 			path = UserListViewController;
 			sourceTree = "<group>";
@@ -272,6 +280,15 @@
 				42B9AF2624089CDC00489A3F /* UserDetailViewModel.swift */,
 			);
 			path = UserDetailViewController;
+			sourceTree = "<group>";
+		};
+		42B9AF2E240949FD00489A3F /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				42B9AF2F24094A1200489A3F /* ErrorViewModel.swift */,
+				42B9AF2C240949F900489A3F /* ErrorView.swift */,
+			);
+			path = ErrorView;
 			sourceTree = "<group>";
 		};
 		B08CB2C0D88CCB64E142D47C /* Pods */ = {
@@ -420,9 +437,11 @@
 				42B9AF2524089C9100489A3F /* UserDetailViewController.swift in Sources */,
 				4241CA7424088B8E008176B6 /* UserTitleView.swift in Sources */,
 				427E5F972407193E006DF4B3 /* TableView.swift in Sources */,
+				42B9AF2D240949F900489A3F /* ErrorView.swift in Sources */,
 				42B9AF2B2408A9F900489A3F /* DarkModeAwareNavigationController.swift in Sources */,
 				427E5F8F24071733006DF4B3 /* HasReuseID.swift in Sources */,
 				427E5F85240713B1006DF4B3 /* UIView+Extensions.swift in Sources */,
+				42B9AF3024094A1200489A3F /* ErrorViewModel.swift in Sources */,
 				427E5FA12407201C006DF4B3 /* ViewController.swift in Sources */,
 				427E5FB5240746C8006DF4B3 /* GetUsersFailureReason.swift in Sources */,
 				42B9AF2724089CDC00489A3F /* UserDetailViewModel.swift in Sources */,
@@ -440,6 +459,7 @@
 				4241CA7624088B97008176B6 /* UserTitleViewModel.swift in Sources */,
 				427E5F9924071977006DF4B3 /* UITableView+Extensions.swift in Sources */,
 				427E5F9E24071FD5006DF4B3 /* UserListViewModel.swift in Sources */,
+				42B9AF32240961E300489A3F /* Spinner.swift in Sources */,
 				427E5F922407178D006DF4B3 /* CellWith.swift in Sources */,
 				422E323E2407045C00BCA1FD /* UserListViewController.swift in Sources */,
 				422E323A2407045C00BCA1FD /* AppDelegate.swift in Sources */,

@@ -13,10 +13,31 @@ import UIKit
 class UserListViewController: ViewController<UserListViewModel> {
     let tableView = TableView<TableViewModel>()
     
+    let spinner = ActivityIndicatorView()
+    
     override func setModel(_ viewModel: UserListViewModel) {
         super.setModel(viewModel)
         
         tableView.setModel(viewModel)
+        
+        provideErrorViewModel(viewModel.errorViewModel)
+        
+        Observable.combineLatest(viewModel.refreshing, viewModel.errorViewModel.isHidden)
+            .map { refreshing, errorHidden in refreshing || !errorHidden }
+            .observeOn(MainScheduler())
+            .bind(to: tableView.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        viewModel.refreshing
+            .observeOn(MainScheduler())
+            .bind { [weak self] refreshing in
+                if refreshing {
+                    self?.spinner.startAnimating()
+                } else {
+                    self?.spinner.stopAnimating()
+                }
+            }
+            .disposed(by: disposeBag)
         
         viewModel.modelSelected
             .observeOn(MainScheduler())
@@ -36,8 +57,11 @@ class UserListViewController: ViewController<UserListViewModel> {
         super.viewDidLoad()
         
         title = "GitHub Users"
-        // navigationController?.navigationBar.prefersLargeTitles = true
         
         view.addSubview(tableView, layout: Edges())
+        
+        view.addSubview(spinner, layout: Center())
+        
+        spinner.hidesWhenStopped = true
     }
 }
