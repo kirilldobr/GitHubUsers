@@ -21,6 +21,9 @@ class UserListViewController: ViewController<UserListViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "GitHub Users"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         tableView.tableView.rowHeight = 75
         
         view.addSubview(tableView, layout: Edges())

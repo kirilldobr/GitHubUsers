@@ -16,11 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let homeViewController = UserListViewController()
-        
         homeViewController.setModel(userListViewModel)
         
+        let navigationController = UINavigationController(rootViewController: homeViewController)
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = homeViewController
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
         return true

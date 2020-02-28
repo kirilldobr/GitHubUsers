@@ -31,8 +31,6 @@ class TableView<Model: TableViewModel>: View<Model> {
         addSubview(tableView, layout: Edges())
         
         tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
-        tableView.separatorStyle = .none
-        tableView.rowHeight = UITableView.automaticDimension
     }
     
     var canEditRowAtIndexPath: (IndexPath) -> Bool = { _ in

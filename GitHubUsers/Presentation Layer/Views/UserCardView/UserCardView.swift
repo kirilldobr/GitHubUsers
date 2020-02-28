@@ -31,15 +31,16 @@ class UserCardView: View<UserCardViewModel> {
         
         verticalStackView.addArrangedSubview(userTitleView)
         verticalStackView.addArrangedSubview(urlLabel)
+        verticalStackView.spacing = 5
         
         horizontalStackView.addArrangedSubview(userAvatarView)
         horizontalStackView.addArrangedSubview(verticalStackViewHolderView)
         horizontalStackView.addArrangedSubview(favoritedButton)
-        
+        horizontalStackView.spacing = 10
         favoritedButton.easy.layout(Width(46))
         userAvatarView.easy.layout(Width(54))
         
-        addSubview(horizontalStackView, layout: Edges())
+        addSubview(horizontalStackView, layout: Top(), Bottom(), Left(16), Right(16))
     }
     
     override func setModel(_ viewModel: UserCardViewModel) {

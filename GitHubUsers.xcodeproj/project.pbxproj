@@ -127,8 +127,8 @@
 		4241CA7224088B77008176B6 /* UserTitleView */ = {
 			isa = PBXGroup;
 			children = (
-				4241CA7324088B8E008176B6 /* UserTitleView.swift */,
 				4241CA7524088B97008176B6 /* UserTitleViewModel.swift */,
+				4241CA7324088B8E008176B6 /* UserTitleView.swift */,
 			);
 			path = UserTitleView;
 			sourceTree = "<group>";
@@ -136,8 +136,8 @@
 		4241CA7724088C0B008176B6 /* UserAvatarView */ = {
 			isa = PBXGroup;
 			children = (
-				4241CA7824088C37008176B6 /* UserAvatarView.swift */,
 				4241CA7A24088C3F008176B6 /* UserAvatarViewModel.swift */,
+				4241CA7824088C37008176B6 /* UserAvatarView.swift */,
 			);
 			path = UserAvatarView;
 			sourceTree = "<group>";
