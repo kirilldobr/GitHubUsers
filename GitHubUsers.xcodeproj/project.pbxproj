@@ -36,7 +36,6 @@
 		427E5FB5240746C8006DF4B3 /* GetUsersFailureReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FB4240746C8006DF4B3 /* GetUsersFailureReason.swift */; };
 		42B9AF2524089C9100489A3F /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2424089C9100489A3F /* UserDetailViewController.swift */; };
 		42B9AF2724089CDC00489A3F /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2624089CDC00489A3F /* UserDetailViewModel.swift */; };
-		42B9AF2B2408A9F900489A3F /* DarkModeAwareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2A2408A9F900489A3F /* DarkModeAwareNavigationController.swift */; };
 		42B9AF2D240949F900489A3F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2C240949F900489A3F /* ErrorView.swift */; };
 		42B9AF3024094A1200489A3F /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2F24094A1200489A3F /* ErrorViewModel.swift */; };
 		42B9AF32240961E300489A3F /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF31240961E300489A3F /* ActivityIndicatorView.swift */; };
@@ -78,7 +77,6 @@
 		427E5FB4240746C8006DF4B3 /* GetUsersFailureReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsersFailureReason.swift; sourceTree = "<group>"; };
 		42B9AF2424089C9100489A3F /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		42B9AF2624089CDC00489A3F /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
-		42B9AF2A2408A9F900489A3F /* DarkModeAwareNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeAwareNavigationController.swift; sourceTree = "<group>"; };
 		42B9AF2C240949F900489A3F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		42B9AF2F24094A1200489A3F /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
 		42B9AF31240961E300489A3F /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 			children = (
 				42B9AF31240961E300489A3F /* ActivityIndicatorView.swift */,
 				427E5F912407178D006DF4B3 /* CellWith.swift */,
-				42B9AF2A2408A9F900489A3F /* DarkModeAwareNavigationController.swift */,
 				427E5FA02407201C006DF4B3 /* ViewController.swift */,
 				427E5F962407193E006DF4B3 /* TableView.swift */,
 				427E5F932407185A006DF4B3 /* View.swift */,
@@ -449,7 +446,6 @@
 				4241CA7424088B8E008176B6 /* UserTitleView.swift in Sources */,
 				427E5F972407193E006DF4B3 /* TableView.swift in Sources */,
 				42B9AF2D240949F900489A3F /* ErrorView.swift in Sources */,
-				42B9AF2B2408A9F900489A3F /* DarkModeAwareNavigationController.swift in Sources */,
 				427E5F8F24071733006DF4B3 /* HasReuseID.swift in Sources */,
 				427E5F85240713B1006DF4B3 /* UIView+Extensions.swift in Sources */,
 				42B9AF3024094A1200489A3F /* ErrorViewModel.swift in Sources */,
