@@ -7,6 +7,7 @@
 //
 
 import EasyPeasy
+import RxSwift
 import UIKit
 
 class UserListViewController: ViewController<UserListViewModel> {
@@ -16,13 +17,26 @@ class UserListViewController: ViewController<UserListViewModel> {
         super.setModel(viewModel)
         
         tableView.setModel(viewModel.tableViewModel)
+        
+        viewModel.tableViewModel.modelSelected
+            .observeOn(MainScheduler())
+            .bind { [weak self] vm in
+                // could have used a generic in TableViewModel
+                // but that would probably make things too complicated
+                guard let userModel = vm as? UserCardViewModel else { return }
+                
+                let userDetailViewModel = UserDetailViewModel(user: userModel.user)
+                let userDetailViewController = UserDetailViewController(viewModel: userDetailViewModel)
+                self?.navigationController?.pushViewController(userDetailViewController, animated: true)
+            }
+            .disposed(by: disposeBag)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "GitHub Users"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        // navigationController?.navigationBar.prefersLargeTitles = true
         
         tableView.tableView.rowHeight = UITableView.automaticDimension
         tableView.tableView.estimatedRowHeight = 75

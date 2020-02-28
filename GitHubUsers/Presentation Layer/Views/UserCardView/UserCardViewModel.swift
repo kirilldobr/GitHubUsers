@@ -13,12 +13,16 @@ class UserCardViewModel: ViewModel {
     let userAvatarViewModel: UserAvatarViewModel
     let userTitleViewModel: UserTitleViewModel
     
-    let url: String
+    let pageURL: String
+    
+    let user: User
     
     init(user: User) {
+        self.user = user
+        
         userAvatarViewModel = UserAvatarViewModel(imageURL: user.avatarURL,
                                                   adminLabelIsHidden: !user.isAdmin)
         userTitleViewModel = UserTitleViewModel(username: user.login, accountType: user.accountType)
-        url = user.url
+        pageURL = user.pageURL
     }
 }

@@ -34,6 +34,9 @@
 		427E5FB124073E44006DF4B3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FB024073E44006DF4B3 /* Endpoint.swift */; };
 		427E5FB324074490006DF4B3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FB224074490006DF4B3 /* NetworkManager.swift */; };
 		427E5FB5240746C8006DF4B3 /* GetUsersFailureReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E5FB4240746C8006DF4B3 /* GetUsersFailureReason.swift */; };
+		42B9AF2524089C9100489A3F /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2424089C9100489A3F /* UserDetailViewController.swift */; };
+		42B9AF2724089CDC00489A3F /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2624089CDC00489A3F /* UserDetailViewModel.swift */; };
+		42B9AF2B2408A9F900489A3F /* DarkModeAwareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9AF2A2408A9F900489A3F /* DarkModeAwareNavigationController.swift */; };
 		F02DC8E3CFF412D174F5E10E /* Pods_GitHubUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E7AF1A3F875967ABDC00E9 /* Pods_GitHubUsers.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,9 @@
 		427E5FB024073E44006DF4B3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		427E5FB224074490006DF4B3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		427E5FB4240746C8006DF4B3 /* GetUsersFailureReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsersFailureReason.swift; sourceTree = "<group>"; };
+		42B9AF2424089C9100489A3F /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		42B9AF2624089CDC00489A3F /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		42B9AF2A2408A9F900489A3F /* DarkModeAwareNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeAwareNavigationController.swift; sourceTree = "<group>"; };
 		A0603CAD8463AD9F30A0BA8D /* Pods-GitHubUsers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUsers.release.xcconfig"; path = "Target Support Files/Pods-GitHubUsers/Pods-GitHubUsers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +184,7 @@
 				4241CA7724088C0B008176B6 /* UserAvatarView */,
 				4241CA7224088B77008176B6 /* UserTitleView */,
 				427E5FA624072227006DF4B3 /* UserCardView */,
+				42B9AF2324089C7D00489A3F /* UserDetailViewController */,
 				427E5F9F24071FF2006DF4B3 /* UserListViewController */,
 			);
 			path = Views;
@@ -187,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				427E5F912407178D006DF4B3 /* CellWith.swift */,
+				42B9AF2A2408A9F900489A3F /* DarkModeAwareNavigationController.swift */,
 				427E5FA02407201C006DF4B3 /* ViewController.swift */,
 				427E5F962407193E006DF4B3 /* TableView.swift */,
 				427E5F932407185A006DF4B3 /* View.swift */,
@@ -255,6 +263,15 @@
 				427E5FA824072A8B006DF4B3 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		42B9AF2324089C7D00489A3F /* UserDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				42B9AF2424089C9100489A3F /* UserDetailViewController.swift */,
+				42B9AF2624089CDC00489A3F /* UserDetailViewModel.swift */,
+			);
+			path = UserDetailViewController;
 			sourceTree = "<group>";
 		};
 		B08CB2C0D88CCB64E142D47C /* Pods */ = {
@@ -400,12 +417,15 @@
 			files = (
 				427E5F8A240714E7006DF4B3 /* ViewModel.swift in Sources */,
 				427E5FB124073E44006DF4B3 /* Endpoint.swift in Sources */,
+				42B9AF2524089C9100489A3F /* UserDetailViewController.swift in Sources */,
 				4241CA7424088B8E008176B6 /* UserTitleView.swift in Sources */,
 				427E5F972407193E006DF4B3 /* TableView.swift in Sources */,
+				42B9AF2B2408A9F900489A3F /* DarkModeAwareNavigationController.swift in Sources */,
 				427E5F8F24071733006DF4B3 /* HasReuseID.swift in Sources */,
 				427E5F85240713B1006DF4B3 /* UIView+Extensions.swift in Sources */,
 				427E5FA12407201C006DF4B3 /* ViewController.swift in Sources */,
 				427E5FB5240746C8006DF4B3 /* GetUsersFailureReason.swift in Sources */,
+				42B9AF2724089CDC00489A3F /* UserDetailViewModel.swift in Sources */,
 				427E5F88240714BF006DF4B3 /* HasViewModel.swift in Sources */,
 				4241CA7B24088C3F008176B6 /* UserAvatarViewModel.swift in Sources */,
 				427E5F8C24071555006DF4B3 /* HasDisposeBag.swift in Sources */,
@@ -560,6 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CS3D57L9L6;
 				INFOPLIST_FILE = GitHubUsers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -579,6 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CS3D57L9L6;
 				INFOPLIST_FILE = GitHubUsers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -22,6 +22,10 @@ struct User: Codable {
     let avatarURL: String
     let login: String
     
+    var pageURL: String {
+        return "https://github.com/" + login + "/"
+    }
+    
     enum CodingKeys: String, CodingKey {
         case avatarURL = "avatar_url"
         case isAdmin = "site_admin"

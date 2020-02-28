@@ -22,6 +22,7 @@ class UserTitleView: View<UserTitleViewModel> {
         let usernameLabelFont = UIFont.systemFont(ofSize: 16)
         usernameLabel.font = UIFontMetrics(forTextStyle: .headline).scaledFont(for: usernameLabelFont)
         usernameLabel.adjustsFontForContentSizeCategory = true
+        usernameLabel.textColor = .black
         
         let userTypeFont = UIFont.systemFont(ofSize: 12)
         accountTypeLabel.font = UIFontMetrics(forTextStyle: .callout).scaledFont(for: userTypeFont)

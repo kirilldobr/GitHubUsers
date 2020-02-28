@@ -14,6 +14,8 @@ class ViewController<Model: ViewModel>: UIViewController, HasViewModel, HasDispo
     let aliveDisposeBag = DisposeBag()
     var disposeBag = DisposeBag()
     
+    let errorLabel = UILabel()
+    
     func setModel(_: Model) {
         disposeBag = DisposeBag()
     }
@@ -21,5 +23,31 @@ class ViewController<Model: ViewModel>: UIViewController, HasViewModel, HasDispo
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        errorLabel.isHidden = true
+        errorLabel.textAlignment = .center
+        errorLabel.numberOfLines = 0
+    }
+    
+    var shouldHaveErrorLabel: Bool = false {
+        didSet {
+            if shouldHaveErrorLabel {
+                view.addSubview(errorLabel, layout: Center())
+                view.layoutIfNeeded()
+            } else {
+                errorLabel.removeFromSuperview()
+            }
+        }
+    }
+    
+    func showError(message: String) {
+        view.bringSubviewToFront(errorLabel)
+        errorLabel.text = message
+        errorLabel.isHidden = false
+    }
+    
+    func hideError() {
+        errorLabel.text = nil
+        errorLabel.isHidden = true
     }
 }

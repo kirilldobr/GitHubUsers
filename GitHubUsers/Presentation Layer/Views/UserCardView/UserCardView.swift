@@ -53,6 +53,6 @@ class UserCardView: View<UserCardViewModel> {
         
         userAvatarView.setModel(viewModel.userAvatarViewModel)
         userTitleView.setModel(viewModel.userTitleViewModel)
-        urlLabel.text = viewModel.url
+        urlLabel.text = viewModel.pageURL
     }
 }
