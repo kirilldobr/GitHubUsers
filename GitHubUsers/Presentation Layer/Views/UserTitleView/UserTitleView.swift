@@ -19,15 +19,16 @@ class UserTitleView: View<UserTitleViewModel> {
         addSubview(usernameLabel, layout: Top(), Bottom(), Left())
         addSubview(accountTypeLabel, layout: Top(), Bottom(), Left(12).to(usernameLabel), Right())
         
-        usernameLabel.setContentHuggingPriority(.required, for: .horizontal)
-        
         let usernameLabelFont = UIFont.systemFont(ofSize: 16)
-        usernameLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: usernameLabelFont)
+        usernameLabel.font = UIFontMetrics(forTextStyle: .headline).scaledFont(for: usernameLabelFont)
         usernameLabel.adjustsFontForContentSizeCategory = true
         
         let userTypeFont = UIFont.systemFont(ofSize: 12)
-        accountTypeLabel.font = UIFontMetrics(forTextStyle: .subheadline).scaledFont(for: userTypeFont)
+        accountTypeLabel.font = UIFontMetrics(forTextStyle: .callout).scaledFont(for: userTypeFont)
         accountTypeLabel.adjustsFontForContentSizeCategory = true
+        
+        usernameLabel.setContentHuggingPriority(.required, for: .horizontal)
+        accountTypeLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
     }
     
     override func setModel(_ viewModel: UserTitleViewModel) {

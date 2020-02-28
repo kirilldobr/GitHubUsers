@@ -27,7 +27,7 @@ class UserCardView: View<UserCardViewModel> {
         let verticalStackView = UIStackView()
         verticalStackView.axis = .vertical
         
-        verticalStackViewHolderView.addSubview(verticalStackView, layout: Left(), Right(), CenterY())
+        verticalStackViewHolderView.addSubview(verticalStackView, layout: Left(), Right(), CenterY(), Top(>=0), Bottom(>=0))
         
         verticalStackView.addArrangedSubview(userTitleView)
         verticalStackView.addArrangedSubview(urlLabel)
@@ -45,7 +45,7 @@ class UserCardView: View<UserCardViewModel> {
         urlLabel.adjustsFontForContentSizeCategory = true
         urlLabel.textColor = .blue
         
-        addSubview(horizontalStackView, layout: Top(), Bottom(), Left(16), Right(16))
+        addSubview(horizontalStackView, layout: Top(11), Bottom(11), Left(16), Right(16))
     }
     
     override func setModel(_ viewModel: UserCardViewModel) {
