@@ -11,7 +11,9 @@ import RxSwift
 import UIKit
 
 class NetworkManager {
-    static func getUsers(since: Int?) -> Observable<[User]> {
+    static let shared = NetworkManager()
+    
+    func getUsers(since: Int?, cache: Bool = true) -> Observable<Event<[User]>> {
         let parameters: [String: Any]?
         
         if let since = since {
@@ -20,8 +22,25 @@ class NetworkManager {
             parameters = nil
         }
         
-        return Observable.create { observer -> Disposable in
-            Alamofire.request(Endpoint.users, parameters: parameters)
+        func requestWithCachePolicy(cache: Bool, urlString: String, parameters: [String: Any]?) -> URLRequest? {
+            guard let url = URL(string: urlString) else { return nil }
+            
+            var urlRequest = URLRequest(url: url)
+            urlRequest.cachePolicy = cache ? .useProtocolCachePolicy : .reloadIgnoringCacheData
+            return try? URLEncoding.default.encode(urlRequest, with: parameters)
+        }
+        
+        return Observable.create { [] observer -> Disposable in
+            
+            guard let encodedRequest = requestWithCachePolicy(cache: cache,
+                                                              urlString: Endpoint.users,
+                                                              parameters: parameters) else {
+                observer.onError(GetUsersFailureReason.notFound)
+                observer.onCompleted()
+                return Disposables.create()
+            }
+            
+            request(encodedRequest)
                 .validate()
                 .responseJSON { response in
                     switch response.result {
@@ -38,17 +57,20 @@ class NetworkManager {
                             observer.onCompleted()
                         } catch {
                             observer.onError(error)
+                            observer.onCompleted()
                         }
                     case let .failure(error):
                         if let statusCode = response.response?.statusCode,
                             let reason = GetUsersFailureReason(rawValue: statusCode) {
                             observer.onError(reason)
+                            observer.onCompleted()
                         }
                         observer.onError(error)
+                        observer.onCompleted()
                     }
                 }
             
             return Disposables.create()
-        }
+        }.materialize()
     }
 }

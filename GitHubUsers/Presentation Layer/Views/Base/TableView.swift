@@ -95,6 +95,7 @@ class TableView<Model: TableViewModel>: View<Model> {
             .disposed(by: disposeBag)
         
         refreshControl.rx.controlEvent(.valueChanged)
+            .debug()
             .bind(to: viewModel.pullToRefresh)
             .disposed(by: disposeBag)
         
