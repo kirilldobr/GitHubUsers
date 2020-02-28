@@ -42,6 +42,7 @@ class UserListViewModel: TableViewModel {
                     self?.errorViewModel.isHidden.accept(true)
                     
                     let userModels = users.map { user in UserCardViewModel(user: user) }
+                    
                     self?.elements.accept(userModels)
                     
                 case let .error(error):

@@ -52,8 +52,9 @@ class NetworkManager {
                             return
                         }
                         do {
-                            let friends = try JSONDecoder().decode([User].self, from: data)
-                            observer.onNext(friends)
+                            let users = try JSONDecoder().decode([User].self, from: data)
+                            observer.onNext(users)
+                            users.forEach { print("\($0.login) \($0.isAdmin)") }
                             observer.onCompleted()
                         } catch {
                             observer.onError(error)

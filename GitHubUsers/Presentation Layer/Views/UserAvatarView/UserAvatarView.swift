@@ -17,12 +17,14 @@ class UserAvatarView: View<UserAvatarViewModel> {
         super.didLoad()
         
         addSubview(imageView, layout: Left(), Right(), Width().like(imageView, .height), CenterY())
-        addSubview(adminLabel, layout: Bottom(), CenterX(), Width(54), Height(16))
+        addSubview(adminLabel, layout: Bottom().to(imageView, .bottom), CenterX(), Width(54), Height(16))
         
-        let adminLabelFont = UIFont.systemFont(ofSize: 10)
-        adminLabel.font = UIFontMetrics(forTextStyle: .footnote).scaledFont(for: adminLabelFont)
-        adminLabel.adjustsFontForContentSizeCategory = true
-        
+        adminLabel.font = UIFont.systemFont(ofSize: 10)
+        adminLabel.textAlignment = .center
+        adminLabel.backgroundColor = UIColor.purple
+        adminLabel.layer.cornerRadius = 5
+        adminLabel.layer.masksToBounds = true
+        adminLabel.backgroundColor = UIColor(red: 147 / 255, green: 117 / 255, blue: 255 / 255, alpha: 1)
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
     }
