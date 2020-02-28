@@ -47,13 +47,4 @@ extension UserDetailViewController: WKNavigationDelegate {
     func webView(_: WKWebView, didFinish _: WKNavigation!) {
         spinner.stopAnimating()
     }
-    
-    func webView(_: WKWebView, didFail _: WKNavigation!, withError error: Error) {
-        spinner.stopAnimating()
-        // showError(message: "Failed to load page with error:\n\(error)")
-    }
-    
-//    func webView(_: WKWebView, didFail _: WKNavigation!, withError error: Error) {
-//
-//    }
 }

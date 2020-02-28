@@ -26,6 +26,7 @@ PODS:
   - SDWebImage (5.5.1):
     - SDWebImage/Core (= 5.5.1)
   - SDWebImage/Core (5.5.1)
+  - Shallows (0.10.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - RxSwift (= 5.0)
   - RxSwiftExt
   - SDWebImage
+  - Shallows
 
 SPEC REPOS:
   trunk:
@@ -50,6 +52,7 @@ SPEC REPOS:
     - RxSwift
     - RxSwiftExt
     - SDWebImage
+    - Shallows
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -62,7 +65,8 @@ SPEC CHECKSUMS:
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   SDWebImage: 1245d058b7b8f59adef7a6da6bbafd4f1ab67041
+  Shallows: be3882d8ecf8b1e8b71deae8b1cb74173cf3e355
 
-PODFILE CHECKSUM: dfe021ed3819ae7151e349ead05a2416c8c85d6e
+PODFILE CHECKSUM: ec8a8603f42f01e70b104c939fac4522bac74c10
 
 COCOAPODS: 1.8.4

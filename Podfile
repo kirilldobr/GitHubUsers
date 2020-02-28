@@ -19,4 +19,6 @@ target 'GitHubUsers' do
 
   pod 'Alamofire'
   
+  pod 'Shallows'
+  
 end

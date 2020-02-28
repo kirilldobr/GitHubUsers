@@ -56,5 +56,14 @@ class UserCardView: View<UserCardViewModel> {
         userAvatarView.setModel(viewModel.userAvatarViewModel)
         userTitleView.setModel(viewModel.userTitleViewModel)
         urlLabel.text = viewModel.pageURL
+        
+        viewModel.isFavorited
+            .map { $0 ? #imageLiteral(resourceName: "Star-enabled") : #imageLiteral(resourceName: "Star") }
+            .bind(to: favoritedButton.rx.image(for: .normal))
+            .disposed(by: disposeBag)
+        
+        favoritedButton.rx.tap
+            .bind(to: viewModel.favoritePressed)
+            .disposed(by: disposeBag)
     }
 }
